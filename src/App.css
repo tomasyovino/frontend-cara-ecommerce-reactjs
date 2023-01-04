@@ -565,6 +565,67 @@ body {
     font-weight: 600;
 }
 
+/* Shop Product Page */
+.proDetails {
+    display: flex;
+    margin-top: 20px;
+}
+
+.proDetails .single-pro-img {
+    width: 40%;
+    margin-right: 50px;
+}
+
+.proDetails .sm-img-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.proDetails .sm-img-column {
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+.proDetails .single-pro-details{
+    width: 50%;
+    padding-top: 30px;
+}
+
+.proDetails .single-pro-details h4 {
+    padding: 20px 0;
+}
+
+.proDetails .single-pro-details h2 {
+    font-size: 26px;
+}
+
+.proDetails .single-pro-details select {
+    display: block;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+.proDetails .single-pro-details input {
+    width: 50px;
+    height: 47px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.proDetails .single-pro-details input:focus {
+    outline: none;
+}
+
+.proDetails .single-pro-details .normal {
+    background-color: #088178;
+    color: #fff;
+}
+
+.proDetails .single-pro-details span {
+    line-height: 25px;
+}
+
 /* Blog Page */
 #blog-hero.page-header {
     background-image: url("./assets/img/banner/b19.jpg");
