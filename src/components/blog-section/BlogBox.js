@@ -1,8 +1,23 @@
-import React from 'react'
+import { Link } from "react-router-dom";
 
-const BlogBox = () => {
+const BlogBox = ({ data }) => {
   return (
-    <div>BlogBox</div>
+    <section id="blog" className='blog'>
+      {
+        data.map((box) => (
+          <div className='blog-box'>
+            <div className='blog-img'>
+              <img src={box.img} alt="blog-site" />
+            </div>
+            <div className='blog-details'>
+              <h4>{box.title}</h4>
+              <p>{box.text}</p>
+              <Link to={box.slug}>SEGUIR LEYENDO</Link>
+            </div>
+          </div>
+        ))
+      }
+    </section>
   )
 }
 
