@@ -57,7 +57,7 @@ const Header = () => {
                     <i class="fa-solid fa-cart-shopping"></i>
                   </NavLink>
                 </li>
-                <span id="close"><i class="fa fa-times"></i></span>
+                <span id="close" className="close"><i class="fa fa-times"></i></span>
             </ul>
        </div>
        <div id="mobile" className='mobile'>
