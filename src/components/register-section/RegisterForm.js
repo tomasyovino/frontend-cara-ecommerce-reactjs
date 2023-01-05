@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 const RegisterForm = () => {
   return (
-    <section className='register-form section-p1 section-m1'>
+    <section className='client-form section-p1 section-m1'>
       <h2>CREA TU CUENTA</h2>
       <p>Únete para acceder a nuestras mejores ofertas</p>
       <form>

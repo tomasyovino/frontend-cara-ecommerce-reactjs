@@ -696,7 +696,7 @@ body {
 
 /* About Page */
 #about-hero.page-header {
-    background-image: url("./assets/img/about/banner.png");
+    background-image: url("./assets/img/banner/b2.jpg");
 }
 
 .about-head {
@@ -938,57 +938,69 @@ body {
     padding: 12px 20px;
 }
 
-/* Register Start */
+/* Register & Login Start */
 
 #register-hero.page-header {
     background-image: url("./assets/img/about/banner.png");
 }
 
-.register-form form {
+#login-hero.page-header {
+    background-image: url("./assets/img/about/banner.png");
+}
+
+.client-form form {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
 }
 
-.register-form form input {
+.client-form form input {
     width: 100%;
     padding: 12px 15px;
     outline: none;
     border: 1px solid #e1e1e1;
 }
 
-.register-form form div {
+.client-form form div {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.register-form form div input {
+.client-form form div input {
     padding: 0;
     width: auto;
     margin: 0;
     margin-left: 10px;
 }
 
-.register-form form div label {
+.client-form form div label {
     margin-top: 3px;
     font-size: 14px;
 }
 
-.register-form form .btn-container {
+.client-form form .btn-container {
     justify-content: space-between;
     width: 100%;
     padding: 0 10px;
+    margin-top: 10px;
 }
 
-.register-form form p {
+.client-form form p {
     font-size: 15px;
 }
 
-.register-form form button {
+.client-form form button {
     background-color: #088178;
     color: #fff;
+}
+
+.client-form form .btn-container div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
 }
 
 /* Start Media Queries */
@@ -1096,6 +1108,13 @@ body {
 
     .form-details form {
         width: 50%;
+    }
+
+    /* Register & Login Page */
+    .client-form form .btn-container {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
     }
 }
 
