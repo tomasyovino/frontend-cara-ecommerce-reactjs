@@ -1004,7 +1004,7 @@ body {
 }
 
 /* Start Media Queries */
-@media (max-width:799px) {
+@media (max-width:1200px) {
     .section-p1 {
         padding: 40px 40px;
     }
@@ -1032,6 +1032,10 @@ body {
     .navbar li {
         margin-bottom: 25px;
     }
+
+    .navbar span {
+        display: none;
+    }
     
     .navbar #lg-bag {
         display: none;
@@ -1050,7 +1054,7 @@ body {
     }
 
     .close {
-        display: initial;
+        display: initial !important;
         position: absolute;
         top: 30px;
         left: 30px;

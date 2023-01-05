@@ -19,3 +19,4 @@ export { default as ContactForm } from './contact-section/ContactForm';
 export { default as SingleProduct } from './pDetail-section/SingleProduct';
 export { default as RegisterForm } from "./register-section/RegisterForm";
 export { default as LoginForm } from "./login-section/LoginForm";
+export { default as ScrollToTop } from "./ScrollToTop";

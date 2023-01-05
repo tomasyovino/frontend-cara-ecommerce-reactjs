@@ -1,16 +1,17 @@
 import { NavLink, Link } from "react-router-dom";
+import { useState } from "react";
 import Logo from "../assets/img/logo.png";
 
 const Header = () => {
-  
+  const [ active, setActive ] = useState(false);
   let connected = false;
-
+  console.log(active)
   return (
     <header id="header" className='header'>
        <Link to="/"><img src={Logo} class="logo" alt="logo" /></Link> 
-
+        
        <div>
-            <ul id="navbar" className='navbar'>
+            <ul id="navbar" className={active ? "navbar active" : "navbar"}>
                 <li>
                   <NavLink
                     to="/" 
@@ -83,7 +84,7 @@ const Header = () => {
                               Login
                             </NavLink>
                           </li>
-                            /
+                            <span>/</span>
                           <li>
                             <NavLink 
                               to="/register"
@@ -94,12 +95,12 @@ const Header = () => {
                           </li>
                         </>
                   }
-                <span id="close" className="close"><i class="fa fa-times"></i></span>
+                <span id="close" className="close" onClick={() => setActive(false)} ><i class="fa fa-times"></i></span>
             </ul>
        </div>
        <div id="mobile" className='mobile'>
             <NavLink to="/cart"><i class="fa-solid fa-cart-shopping"></i></NavLink>
-            <i id="bar" class="fas fa-outdent"></i>
+            <i id="bar" className="fas fa-outdent" onClick={() => setActive(true)}></i>
        </div>
     </header>
   )
