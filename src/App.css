@@ -193,7 +193,6 @@ body {
     background-color: #e8f6ea;
     font-size: 16px !important;
     color: #088178 !important;
-    border: 1px solid #cce7d0;
     position: absolute;
     bottom: 20px;
     right: 10px;
@@ -937,6 +936,59 @@ body {
     background-color: #088178;
     color: #fff;
     padding: 12px 20px;
+}
+
+/* Register Start */
+
+#register-hero.page-header {
+    background-image: url("./assets/img/about/banner.png");
+}
+
+.register-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.register-form form input {
+    width: 100%;
+    padding: 12px 15px;
+    outline: none;
+    border: 1px solid #e1e1e1;
+}
+
+.register-form form div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.register-form form div input {
+    padding: 0;
+    width: auto;
+    margin: 0;
+    margin-left: 10px;
+}
+
+.register-form form div label {
+    margin-top: 3px;
+    font-size: 14px;
+}
+
+.register-form form .btn-container {
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.register-form form p {
+    font-size: 15px;
+}
+
+.register-form form button {
+    background-color: #088178;
+    color: #fff;
 }
 
 /* Start Media Queries */

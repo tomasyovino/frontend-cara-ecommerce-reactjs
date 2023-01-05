@@ -14,56 +14,56 @@ const newArrivals_products = [
     brand: "adidas",
     name: "Camisas de dibujos",
     price: "780",
-    slug: "/"
+    slug: "/product/1"
   },
   {
     img: f2,
     brand: "adidas",
     name: "Camisas de dibujos",
     price: "780",
-    slug: "/"
+    slug: "/product/1"
   },
   {
     img: f3,
     brand: "adidas",
     name: "Camisas de dibujos",
     price: "780",
-    slug: "/"
+    slug: "/product/1"
   },
   {
     img: f4,
     brand: "adidas",
     name: "Camisas de dibujos",
     price: "780",
-    slug: "/"
+    slug: "/product/1"
   },
   {
     img: f5,
     brand: "adidas",
     name: "Camisas de dibujos",
     price: "780",
-    slug: "/"
+    slug: "/product/1"
   },
   {
     img: f6,
     brand: "adidas",
     name: "Camisas de dibujos",
     price: "780",
-    slug: "/"
+    slug: "/product/1"
   },
   {
     img: f7,
     brand: "adidas",
     name: "Camisas de dibujos",
     price: "780",
-    slug: "/"
+    slug: "/product/1"
   },
   {
     img: f8,
     brand: "adidas",
     name: "Camisas de dibujos",
     price: "780",
-    slug: "/"
+    slug: "/product/1"
   },
 ]
 

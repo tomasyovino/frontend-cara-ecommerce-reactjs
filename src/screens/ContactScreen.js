@@ -3,7 +3,7 @@ import { Header, PageHeader, ContactDetails, ContactForm, Newsletter, Footer } f
 const ContactScreen = () => {
   const pageHeaderData = {
     id: "contact-hero",
-    title: "conócenos",
+    title: "contáctanos",
     text: "¡Lorem ipsum dolor sit amet, consectetur!"
   }
 

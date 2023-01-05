@@ -3,6 +3,8 @@ import Logo from "../assets/img/logo.png";
 
 const Header = () => {
   
+  let connected = false;
+
   return (
     <header id="header" className='header'>
        <Link to="/"><img src={Logo} class="logo" alt="logo" /></Link> 
@@ -49,14 +51,49 @@ const Header = () => {
                     Contáctanos
                   </NavLink>
                 </li>
-                <li id="lg-bag">
-                  <NavLink 
-                    to="/cart"
-                    className={({ isActive }) => isActive ? "active" : undefined}
-                  >
-                    <i class="fa-solid fa-cart-shopping"></i>
-                  </NavLink>
-                </li>
+                
+                  {
+                    connected 
+                      ?
+                        <>
+                          <li>
+                            <NavLink 
+                              to="/logout"
+                              className={({ isActive }) => isActive ? "active" : undefined}
+                            >
+                              Salir
+                            </NavLink>
+                          </li>
+                          <li id="lg-bag">
+                            <NavLink 
+                              to="/cart"
+                              className={({ isActive }) => isActive ? "active" : undefined}
+                            >
+                              <i class="fa-solid fa-cart-shopping"></i>
+                            </NavLink>
+                          </li>
+                        </>
+                      :
+                        <>
+                          <li>
+                            <NavLink 
+                              to="/login"
+                              className={({ isActive }) => isActive ? "active" : undefined}
+                            >
+                              Login
+                            </NavLink>
+                          </li>
+                            /
+                          <li>
+                            <NavLink 
+                              to="/register"
+                              className={({ isActive }) => isActive ? "active" : undefined}
+                            >
+                              Registrarse
+                            </NavLink>
+                          </li>
+                        </>
+                  }
                 <span id="close" className="close"><i class="fa fa-times"></i></span>
             </ul>
        </div>

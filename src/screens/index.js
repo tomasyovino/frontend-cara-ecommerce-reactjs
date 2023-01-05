@@ -5,3 +5,5 @@ export { default as CartScreen } from './CartScreen';
 export { default as ContactScreen } from './ContactScreen';
 export { default as ProductDetailScreen } from './ProductDetailScreen';
 export { default as ShopScreen } from './ShopScreen';
+export { default as RegisterScreen } from './RegisterScreen';
+export { default as LoginScreen } from './LoginScreen';

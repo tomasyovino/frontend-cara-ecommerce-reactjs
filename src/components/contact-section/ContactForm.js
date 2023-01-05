@@ -9,7 +9,6 @@ const ContactForm = () => {
             <span>DÉJANOS UN MENSAJE</span>
             <h2>Nos encanta saber de ti</h2>
             <input type="text" placeholder="Tu nombre" />
-            <input type="email" placeholder="Tu E-mail" />
             <input type="text" placeholder="Asunto" />
             <textarea name="" id="" cols="30" rows="10" placeholder="Escribe tu mensaje"></textarea>
             <button class="normal">Enviar</button>

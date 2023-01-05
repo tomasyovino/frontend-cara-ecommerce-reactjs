@@ -17,3 +17,5 @@ export { default as CartTable } from './cart-section/CartTable';
 export { default as ContactDetails } from './contact-section/ContactDetails';
 export { default as ContactForm } from './contact-section/ContactForm';
 export { default as SingleProduct } from './pDetail-section/SingleProduct';
+export { default as RegisterForm } from "./register-section/RegisterForm";
+export { default as LoginForm } from "./login-section/LoginForm";
