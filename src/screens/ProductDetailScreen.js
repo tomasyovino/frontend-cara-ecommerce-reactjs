@@ -5,7 +5,7 @@ const ProductDetailScreen = () => {
     <>
         <Header />
         <SingleProduct />
-        <Highlights />
+        <Highlights carousel={true} />
         <Newsletter />
         <Footer />
     </>

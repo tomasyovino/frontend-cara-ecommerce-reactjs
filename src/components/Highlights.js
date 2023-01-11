@@ -7,6 +7,8 @@ import f6 from "../assets/img/products/f6.jpg";
 import f7 from "../assets/img/products/f7.jpg";
 import f8 from "../assets/img/products/f8.jpg";
 import { Link } from "react-router-dom";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const highlights_products = [
   {
@@ -67,33 +69,85 @@ const highlights_products = [
   },
 ]
 
-const Highlights = () => {
+const Highlights = ({ carousel }) => {
+  const responsive = {
+    superLargeDesktop: {
+        breakpoint: { max:4000, min: 3000 },
+        items: 5
+    },
+    desktop: {
+        breakpoint: { max: 3000, min: 1024 },
+        items: 4
+    },
+    tablet: {
+        breakpoint: { max: 1024, min: 464 },
+        items: 2
+    },
+    mobile: {
+        breakpoint: { max: 464, min: 0 },
+        items: 1
+    }
+  };
+
   return (
     <section id="highlights" className="product1 section-p1">
-        <h2>Productos destacados</h2>
-        <p>Colección de verano - Nuevo Diseño de Morden</p>
-        <div className="pro-container">
-          {
-            highlights_products.map((product) => (
-              <div className="pro">
-                <img src={product.img} alt="Product" />
-                <div className="description">
-                  <span>{product.brand}</span>
-                  <h5>{product.name}</h5>
-                  <div className="star">
-                    <i className="fas fa-star"></i>
-                    <i className="fas fa-star"></i>
-                    <i className="fas fa-star"></i>
-                    <i className="fas fa-star"></i>
-                    <i className="fas fa-star"></i>
-                    <h4>{product.price}</h4>
+      <h2>Productos destacados</h2>
+      <p>Colección de verano - Nuevo Diseño de Morden</p>
+      <div className={!carousel ? "pro-container" : undefined}>
+      {
+        !carousel
+          ?
+            <>
+                {
+                  highlights_products.map((product) => (
+                    <div className="pro">
+                      <img src={product.img} alt="Product" />
+                      <div className="description">
+                        <span>{product.brand}</span>
+                        <h5>{product.name}</h5>
+                        <div className="star">
+                          <i className="fas fa-star"></i>
+                          <i className="fas fa-star"></i>
+                          <i className="fas fa-star"></i>
+                          <i className="fas fa-star"></i>
+                          <i className="fas fa-star"></i>
+                          <h4>{product.price}</h4>
+                        </div>
+                        <Link to={product.slug}><i className="fa-solid fa-shopping-cart cart"></i></Link>
+                      </div> 
+                    </div>
+                  ))
+                }
+            </>
+          : 
+            <Carousel
+              responsive={responsive} 
+              infinite={true} 
+              autoPlay={true} 
+            >
+              {
+                highlights_products.map((product) => (
+                  <div className="pro">
+                    <img src={product.img} alt="Product" />
+                    <div className="description">
+                      <span>{product.brand}</span>
+                      <h5>{product.name}</h5>
+                      <div className="star">
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <h4>{product.price}</h4>
+                      </div>
+                      <Link to={product.slug}><i className="fa-solid fa-shopping-cart cart"></i></Link>
+                    </div> 
                   </div>
-                  <Link to={product.slug}><i className="fa-solid fa-shopping-cart cart"></i></Link>
-                </div> 
-              </div>
-            ))
-          }
-        </div>
+                ))
+              }
+            </Carousel>
+      }
+      </div>
     </section>
   )
 }
