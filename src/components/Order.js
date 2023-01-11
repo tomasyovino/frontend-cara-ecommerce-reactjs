@@ -1,8 +1,6 @@
-import { Link } from "react-router-dom";
-
 const Order = ({ order }) => {
   return (
-    <Link to={`/orders/${order._id}`} className='order-container'>
+    <div className='order-container'>
       <table className='products-table'>
         <thead>
           <tr>
@@ -36,12 +34,12 @@ const Order = ({ order }) => {
         <div>
           <span><strong>Total:</strong> ${order.amount}</span>
           <span
-            className={order.status == "Delivered" ? "green" : "yellow"}
+            className={order.status === "Delivered" ? "green" : "yellow"}
           ><strong>{order.status}</strong></span>
         </div>
       </div>
-    </Link>
-  )
-}
+    </div>
+  );
+};
 
 export default Order;

@@ -8,3 +8,4 @@ export { default as ShopScreen } from './ShopScreen';
 export { default as RegisterScreen } from './RegisterScreen';
 export { default as LoginScreen } from './LoginScreen';
 export { default as ProfileScreen } from "./ProfileScreen";
+export { default as OrderScreen } from "./OrderScreen";

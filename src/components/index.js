@@ -22,5 +22,7 @@ export { default as LoginForm } from "./auth-section/LoginForm";
 export { default as ProfileBanner } from "./profile-section/ProfileBanner";
 export { default as ProfileData } from "./profile-section/ProfileData";
 export { default as ProfileOrders } from "./profile-section/ProfileOrders";
+export { default as OrdersContainer } from "./orders-section/OrdersContainer";
 export { default as Order } from "./Order";
+export { default as PayButton } from "./PayButton";
 export { default as ScrollToTop } from "./ScrollToTop";
