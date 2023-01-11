@@ -4,7 +4,7 @@ import Logo from "../assets/img/logo.png";
 
 const Header = () => {
   const [ active, setActive ] = useState(false);
-  let connected = false;
+  let connected = true;
   console.log(active)
   return (
     <header id="header" className='header'>
@@ -52,49 +52,22 @@ const Header = () => {
                     Contáctanos
                   </NavLink>
                 </li>
-                
-                  {
-                    connected 
-                      ?
-                        <>
-                          <li>
-                            <NavLink 
-                              to="/logout"
-                              className={({ isActive }) => isActive ? "active" : undefined}
-                            >
-                              Salir
-                            </NavLink>
-                          </li>
-                          <li id="lg-bag">
-                            <NavLink 
-                              to="/cart"
-                              className={({ isActive }) => isActive ? "active" : undefined}
-                            >
-                              <i class="fa-solid fa-cart-shopping"></i>
-                            </NavLink>
-                          </li>
-                        </>
-                      :
-                        <>
-                          <li>
-                            <NavLink 
-                              to="/login"
-                              className={({ isActive }) => isActive ? "active" : undefined}
-                            >
-                              Login
-                            </NavLink>
-                          </li>
-                            <span>/</span>
-                          <li>
-                            <NavLink 
-                              to="/register"
-                              className={({ isActive }) => isActive ? "active" : undefined}
-                            >
-                              Registrarse
-                            </NavLink>
-                          </li>
-                        </>
-                  }
+                <li>
+                  <NavLink
+                    to={ connected ? "/profile" : "/login" }
+                    className={({ isActive }) => isActive ? "active" : undefined}
+                  >
+                    <i class="fa-solid fa-user"></i>
+                  </NavLink>
+                </li>
+                <li id="lg-bag">
+                  <NavLink 
+                    to="/cart"
+                    className={({ isActive }) => isActive ? "active" : undefined}
+                  >
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </NavLink>
+                </li>
                 <span id="close" className="close" onClick={() => setActive(false)} ><i class="fa fa-times"></i></span>
             </ul>
        </div>
