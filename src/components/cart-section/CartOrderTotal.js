@@ -1,4 +1,4 @@
-import React from 'react'
+import { PayButton } from "../"
 
 const CartOrderTotal = () => {
   return (
@@ -19,7 +19,7 @@ const CartOrderTotal = () => {
                     <td><strong>$3540</strong></td>
                 </tr>
             </table>
-            <button className="normal">Comprar</button>
+            <PayButton />
         </div>
     </section>
   )
