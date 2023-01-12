@@ -1,4 +1,5 @@
 import { Header, PageHeader, Highlights, Pagination, Newsletter, Footer } from "../components";
+import products from "../data/products.json";
 
 const ShopScreen = () => {
   const pageHeaderData = {
@@ -11,7 +12,7 @@ const ShopScreen = () => {
     <>
         <Header />
         <PageHeader data={pageHeaderData} />
-        <Highlights />
+        <Highlights products={products} />
         <Pagination />
         <Newsletter />
         <Footer />

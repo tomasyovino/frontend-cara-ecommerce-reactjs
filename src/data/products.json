@@ -1,0 +1,184 @@
+[
+    {
+        "_id": "1",
+        "file": [
+            {
+                "_id": "1",
+                "imgUrl": "https://res.cloudinary.com/dtyrld6tv/image/upload/v1673125446/cara-ecommerce/f1_gltfhd.jpg",
+                "color": "Spring"
+            },
+            {
+                "_id": "2",
+                "imgUrl": "https://res.cloudinary.com/dtyrld6tv/image/upload/v1673125492/cara-ecommerce/f2_adsx3x.jpg",
+                "color": "Natural Light"
+            },
+            {
+                "_id": "3",
+                "imgUrl": "https://res.cloudinary.com/dtyrld6tv/image/upload/v1673125494/cara-ecommerce/f3_u61xfg.jpg",
+                "color": "Orange Sunset"
+            },
+            {
+                "_id": "4",
+                "imgUrl": "https://res.cloudinary.com/dtyrld6tv/image/upload/v1673125493/cara-ecommerce/f4_tgyqdc.jpg",
+                "color": "Pink Sakura"
+            }
+        ],
+        "brand": "adidas",
+        "name": "Camisetas Fashion",
+        "price": 780,
+        "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, reiciendis molestiae commodi cum deserunt expedita sed nobis fugit vero amet autem laudantium earum dignissimos. Quidem nam ea molestias repellat voluptatum. Aliquam sunt quae saepe iure eligendi. Quia, ad. Quod in ratione suscipit nisi quibusdam eveniet officia molestiae harum ab illum inventore tenetur, error corporis. Obcaecati omnis eum similique ducimus dolorum."
+    },
+    {
+        "_id": "2",
+        "file": [
+            {
+                "_id": "1",
+                "imgUrl": "https://res.cloudinary.com/dtyrld6tv/image/upload/v1673125492/cara-ecommerce/f2_adsx3x.jpg",
+                "color": "Gray"
+            },
+            {
+                "_id": "2",
+                "imgUrl": "https://res.cloudinary.com/dtyrld6tv/image/upload/v1673125494/cara-ecommerce/f3_u61xfg.jpg",
+                "color": "Blue"
+            },
+            {
+                "_id": "3",
+                "imgUrl": "https://res.cloudinary.com/dtyrld6tv/image/upload/v1673125493/cara-ecommerce/f4_tgyqdc.jpg",
+                "color": "White"
+            },
+            {
+                "_id": "4",
+                "imgUrl": "https://res.cloudinary.com/dtyrld6tv/image/upload/v1673125446/cara-ecommerce/f1_gltfhd.jpg",
+                "color": "Grayish white"
+            }
+        ],
+        "brand": "adidas",
+        "name": "Camisas Formales",
+        "price": 900,
+        "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, reiciendis molestiae commodi cum deserunt expedita sed nobis fugit vero amet autem laudantium earum dignissimos. Quidem nam ea molestias repellat voluptatum. Aliquam sunt quae saepe iure eligendi. Quia, ad. Quod in ratione suscipit nisi quibusdam eveniet officia molestiae harum ab illum inventore tenetur, error corporis. Obcaecati omnis eum similique ducimus dolorum."
+    },
+    {
+        "_id": "3",
+        "file": [
+            {
+                "_id": "1",
+                "imgUrl": "https://res.cloudinary.com/dtyrld6tv/image/upload/v1673125493/cara-ecommerce/f4_tgyqdc.jpg",
+                "color": "Yellow & Red"
+            }
+        ],
+        "brand": "adidas",
+        "name": "Camisa Atracciones",
+        "price": 1200,
+        "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, reiciendis molestiae commodi cum deserunt expedita sed nobis fugit vero amet autem laudantium earum dignissimos. Quidem nam ea molestias repellat voluptatum. Aliquam sunt quae saepe iure eligendi. Quia, ad. Quod in ratione suscipit nisi quibusdam eveniet officia molestiae harum ab illum inventore tenetur, error corporis. Obcaecati omnis eum similique ducimus dolorum."
+    },
+    {
+        "_id": "4",
+        "file": [
+            {
+                "_id": "4",
+                "imgUrl": "https://res.cloudinary.com/dtyrld6tv/image/upload/v1673125446/cara-ecommerce/f1_gltfhd.jpg",
+                "color": "Grayish white"
+            },
+            {
+                "_id": "1",
+                "imgUrl": "https://res.cloudinary.com/dtyrld6tv/image/upload/v1673125492/cara-ecommerce/f2_adsx3x.jpg",
+                "color": "Gray"
+            },
+            {
+                "_id": "2",
+                "imgUrl": "https://res.cloudinary.com/dtyrld6tv/image/upload/v1673125494/cara-ecommerce/f3_u61xfg.jpg",
+                "color": "Blue"
+            },
+            {
+                "_id": "3",
+                "imgUrl": "https://res.cloudinary.com/dtyrld6tv/image/upload/v1673125493/cara-ecommerce/f4_tgyqdc.jpg",
+                "color": "White"
+            }
+        ],
+        "brand": "adidas",
+        "name": "Camisas de dibujos",
+        "price": 780,
+        "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, reiciendis molestiae commodi cum deserunt expedita sed nobis fugit vero amet autem laudantium earum dignissimos. Quidem nam ea molestias repellat voluptatum. Aliquam sunt quae saepe iure eligendi. Quia, ad. Quod in ratione suscipit nisi quibusdam eveniet officia molestiae harum ab illum inventore tenetur, error corporis. Obcaecati omnis eum similique ducimus dolorum."
+    },
+    {
+        "_id": "5",
+        "file": [
+            {
+                "_id": "1",
+                "imgUrl": "https://res.cloudinary.com/dtyrld6tv/image/upload/v1673125493/cara-ecommerce/f5_ilh5fb.jpg",
+                "color": "Pink & Purple"
+            },
+            {
+                "_id": "2",
+                "imgUrl": "https://res.cloudinary.com/dtyrld6tv/image/upload/v1673125494/cara-ecommerce/n4_whlkjk.jpg",
+                "color": "White & Gold"
+            }
+        ],
+        "brand": "adidas",
+        "name": "Camisetas Con Flores",
+        "price": 1200,
+        "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, reiciendis molestiae commodi cum deserunt expedita sed nobis fugit vero amet autem laudantium earum dignissimos. Quidem nam ea molestias repellat voluptatum. Aliquam sunt quae saepe iure eligendi. Quia, ad. Quod in ratione suscipit nisi quibusdam eveniet officia molestiae harum ab illum inventore tenetur, error corporis. Obcaecati omnis eum similique ducimus dolorum."
+    },
+    {
+        "_id": "6",
+        "file": [
+            {
+                "_id": "1",
+                "imgUrl": "https://res.cloudinary.com/dtyrld6tv/image/upload/v1673125494/cara-ecommerce/f6_wmje8e.jpg",
+                "color": "Blue & Orange"
+            },
+            {
+                "_id": "2",
+                "imgUrl": "https://res.cloudinary.com/dtyrld6tv/image/upload/v1673125494/cara-ecommerce/n7_cvwrz4.jpg",
+                "color": "Yellow"
+            },
+            {
+                "_id": "3",
+                "imgUrl": "https://res.cloudinary.com/dtyrld6tv/image/upload/v1673125494/cara-ecommerce/n5_mgvqva.jpg",
+                "color": "Blue"
+            },
+            {
+                "_id": "4",
+                "imgUrl": "https://res.cloudinary.com/dtyrld6tv/image/upload/v1673125494/cara-ecommerce/n3_oyzdx2.jpg",
+                "color": "White"
+            }
+        ],
+        "brand": "adidas",
+        "name": "Camisas Manga Largas",
+        "price": 880,
+        "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, reiciendis molestiae commodi cum deserunt expedita sed nobis fugit vero amet autem laudantium earum dignissimos. Quidem nam ea molestias repellat voluptatum. Aliquam sunt quae saepe iure eligendi. Quia, ad. Quod in ratione suscipit nisi quibusdam eveniet officia molestiae harum ab illum inventore tenetur, error corporis. Obcaecati omnis eum similique ducimus dolorum."
+    },
+    {
+        "_id": "7",
+        "file": [
+            {
+                "_id": "1",
+                "imgUrl": "https://res.cloudinary.com/dtyrld6tv/image/upload/v1673125493/cara-ecommerce/f8_mrdruh.jpg",
+                "color": "Pink White"
+            },
+            {
+                "_id": "2",
+                "imgUrl": "https://res.cloudinary.com/dtyrld6tv/image/upload/v1673125493/cara-ecommerce/f7_og5kvj.jpg",
+                "color": "White"
+            }
+        ],
+        "brand": "adidas",
+        "name": "Falda de Verano",
+        "price": 700,
+        "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, reiciendis molestiae commodi cum deserunt expedita sed nobis fugit vero amet autem laudantium earum dignissimos. Quidem nam ea molestias repellat voluptatum. Aliquam sunt quae saepe iure eligendi. Quia, ad. Quod in ratione suscipit nisi quibusdam eveniet officia molestiae harum ab illum inventore tenetur, error corporis. Obcaecati omnis eum similique ducimus dolorum."
+    },
+    {
+        "_id": "8",
+        "file": [
+            {
+                "_id": "1",
+                "imgUrl": "https://res.cloudinary.com/dtyrld6tv/image/upload/v1673125494/cara-ecommerce/n6_m4cbhq.jpg",
+                "color": "White"
+            }
+        ],
+        "brand": "adidas",
+        "name": "Pantalones de Verano",
+        "price": 700,
+        "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, reiciendis molestiae commodi cum deserunt expedita sed nobis fugit vero amet autem laudantium earum dignissimos. Quidem nam ea molestias repellat voluptatum. Aliquam sunt quae saepe iure eligendi. Quia, ad. Quod in ratione suscipit nisi quibusdam eveniet officia molestiae harum ab illum inventore tenetur, error corporis. Obcaecati omnis eum similique ducimus dolorum."
+    }
+]

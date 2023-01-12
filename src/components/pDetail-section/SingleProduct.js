@@ -1,32 +1,22 @@
-import f1 from "../../assets/img/products/f1.jpg";
-import f2 from "../../assets/img/products/f2.jpg";
-import f3 from "../../assets/img/products/f3.jpg";
-import f4 from "../../assets/img/products/f4.jpg";
-
-const SingleProduct = () => {
+const SingleProduct = ({ products }) => {
   return (
     <section id="proDetails" className="proDetails section-p1">
         <div className="single-pro-img">
-            <img src={f1} width="100%" id="mainImg" alt="Producto" />
+            <img src={products[0].file[0].imgUrl} width="100%" id="mainImg" alt="Producto" />
             <div className="sm-img-group">
-                <div className="sm-img-column"> 
-                    <img src={f1} className="sm-img" width="100%" alt="Producto seleccionable" />
-                </div>
-                <div className="sm-img-column"> 
-                    <img src={f2} className="sm-img" width="100%" alt="Producto seleccionable" />
-                </div>
-                <div className="sm-img-column"> 
-                    <img src={f3} className="sm-img" width="100%" alt="Producto seleccionable" />
-                </div>
-                <div className="sm-img-column"> 
-                    <img src={f4} className="sm-img" width="100%" alt="Producto seleccionable" />
-                </div>
+                {
+                    products[0].file.map((f) => (
+                        <div className="sm-img-column" key={f._id}> 
+                            <img src={f.imgUrl} className="sm-img" width="100%" alt="Producto seleccionable" />
+                        </div>
+                    ))
+                }
             </div>
         </div>
         <div className="single-pro-details">
-            <h6>Inicio / Camiseta</h6>
-            <h4>Camiseta Fashion de Hombre</h4>
-            <h2>$1390.00</h2>
+            <h6>Inicio /</h6>
+            <h4>{products[0].name}</h4>
+            <h2>${products[0].price}</h2>
             <select>
                 <option>Select Size</option>
                 <option>XL</option>
@@ -37,8 +27,7 @@ const SingleProduct = () => {
             <input type="number" value="1" />
             <button className="normal">Agregar al Carrito</button>
             <h4>Detalles del Producto</h4>
-            <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, reiciendis molestiae commodi cum deserunt expedita sed nobis fugit vero amet autem laudantium earum dignissimos. Quidem nam ea molestias repellat voluptatum.
-            Aliquam sunt quae saepe iure eligendi. Quia, ad. Quod in ratione suscipit nisi quibusdam eveniet officia molestiae harum ab illum inventore tenetur, error corporis. Obcaecati omnis eum similique ducimus dolorum.</span>
+            <span>{products[0].desc}</span>
         </div>
     </section>
   )
