@@ -1,9 +1,6 @@
-import f1 from "../../assets/img/products/f1.jpg";
-import f2 from "../../assets/img/products/f2.jpg";
-import f3 from "../../assets/img/products/f3.jpg";
 import { Link } from "react-router-dom";
 
-const CartTable = () => {
+const CartTable = ({ cartProducts }) => {
   return (
     <section id="cart" className="cart section-p1">
         <table width="100%">
@@ -18,30 +15,21 @@ const CartTable = () => {
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td><Link to="/"><i className="fa fa-times" aria-hidden="true"></i></Link></td>
-                    <td><img src={f1} alt="Product" /></td>
-                    <td>Camisas de dibujos</td>
-                    <td>$1180</td>
-                    <td><input type="number" value="1" /></td>
-                    <td>$1180</td>
-                </tr>
-                <tr>
-                    <td><Link to="/"><i className="fa fa-times" aria-hidden="true"></i></Link></td>
-                    <td><img src={f2} alt="Product" /></td>
-                    <td>Camisas de dibujos</td>
-                    <td>$1180</td>
-                    <td><input type="number" value="1" /></td>
-                    <td>$1180</td>
-                </tr>
-                <tr>
-                    <td><Link to="/"><i className="fa fa-times" aria-hidden="true"></i></Link></td>
-                    <td><img src={f3} alt="Product" /></td>
-                    <td>Camisas de dibujos</td>
-                    <td>$1180</td>
-                    <td><input type="number" value="1" /></td>
-                    <td>$1180</td>
-                </tr>
+                {
+                    cartProducts && cartProducts.length > 0 
+                        ?
+                            cartProducts.map((product) => (
+                                <tr key={product._id}>
+                                    <td><Link to="/"><i className="fa fa-times" aria-hidden="true"></i></Link></td>
+                                    <td><img src={product.color.imgUrl} alt={product.name} /></td>
+                                    <td>{`${product.name} (${product.size})`}</td>
+                                    <td>{product.price}</td>
+                                    <td><span>{product.quantity}</span></td>
+                                    <td>{product.price * product.quantity}</td>
+                                </tr>
+                            ))
+                        : null
+                }
             </tbody>
         </table>
     </section>

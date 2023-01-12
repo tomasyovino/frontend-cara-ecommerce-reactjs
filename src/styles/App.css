@@ -961,6 +961,33 @@ body {
     padding: 12px 20px;
 }
 
+.cart-add .no-items-on-cart {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-add .no-items-on-cart div {
+    text-align: center;
+    padding: 10px 30px;
+    width: 50%;
+}
+.cart-add .no-items-on-cart div h3 {
+    margin-bottom: 50px;
+}
+
+.cart-add .no-items-on-cart div a {
+    text-decoration: none;
+    background-color: #088178;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
 /* Register & Login Start */
 
 #register-hero.page-header {

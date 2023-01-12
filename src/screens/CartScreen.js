@@ -1,6 +1,8 @@
 import { Header, PageHeader, CartTable, CartOrderTotal, Footer } from "../components";
+import { useSelector } from "react-redux";
 
 const CartScreen = () => {
+  const cart = useSelector((state) => state.cart);
   const pageHeaderData = {
     id: "cart-hero",
     title: "conócenos",
@@ -11,8 +13,8 @@ const CartScreen = () => {
     <>
         <Header />
         <PageHeader data={pageHeaderData} />
-        <CartTable />
-        <CartOrderTotal />
+        <CartTable cartProducts={cart.products} />
+        <CartOrderTotal cartAmount={cart}/>
         <Footer />
     </>
   )
