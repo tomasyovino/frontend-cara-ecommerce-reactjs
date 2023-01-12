@@ -1,6 +1,5 @@
 import { Footer, Header, PageHeader, ProfileBanner,Highlights, Newsletter } from "../components";
 import orders from "../data/orders.json";
-import products from "../data/products.json";
 
 const user = {
   name: "Tomás Yovino",
@@ -9,7 +8,7 @@ const user = {
   address: "Arg, Bs As"
 };
 
-const ProfileScreen = () => {
+const ProfileScreen = ({ products }) => {
   return (
     <>
         <Header />

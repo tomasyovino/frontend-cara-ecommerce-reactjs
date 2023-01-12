@@ -32,7 +32,7 @@ const Highlights = ({ carousel, products }) => {
           ?
             <>
                 {
-                  products.map((product) => (
+                  products && products.map((product) => (
                     <div className="pro" key={product._id}>
                       <img src={product.file[0].imgUrl} alt={product.name} />
                       <div className="description">
@@ -53,32 +53,33 @@ const Highlights = ({ carousel, products }) => {
                 }
             </>
           : 
-            <Carousel
-              responsive={responsive} 
-              infinite={true} 
-              autoPlay={true} 
-            >
-              {
-                products.map((product) => (
-                  <div className="pro" key={product._id}>
-                    <img src={product.file[0].imgUrl} alt={product.name} />
-                    <div className="description">
-                      <span>{product.brand}</span>
-                      <h5>{product.name}</h5>
-                      <div className="star">
-                        <i className="fas fa-star"></i>
-                        <i className="fas fa-star"></i>
-                        <i className="fas fa-star"></i>
-                        <i className="fas fa-star"></i>
-                        <i className="fas fa-star"></i>
-                        <h4>${product.price}</h4>
-                      </div>
-                      <Link to={`/products/${product._id}`}><i className="fa-solid fa-shopping-cart cart"></i></Link>
-                    </div> 
-                  </div>
-                ))
-              }
-            </Carousel>
+            products &&
+              <Carousel
+                responsive={responsive} 
+                infinite={true} 
+                autoPlay={true} 
+              >
+                {
+                  products && products.map((product) => (
+                    <div className="pro" key={product._id}>
+                      <img src={product.file[0].imgUrl} alt={product.name} />
+                      <div className="description">
+                        <span>{product.brand}</span>
+                        <h5>{product.name}</h5>
+                        <div className="star">
+                          <i className="fas fa-star"></i>
+                          <i className="fas fa-star"></i>
+                          <i className="fas fa-star"></i>
+                          <i className="fas fa-star"></i>
+                          <i className="fas fa-star"></i>
+                          <h4>${product.price}</h4>
+                        </div>
+                        <Link to={`/products/${product._id}`}><i className="fa-solid fa-shopping-cart cart"></i></Link>
+                      </div> 
+                    </div>
+                  ))
+                }
+              </Carousel>
       }
       </div>
     </section>

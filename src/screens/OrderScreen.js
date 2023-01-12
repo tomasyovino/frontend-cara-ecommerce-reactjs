@@ -1,8 +1,7 @@
 import { Footer, Header, OrdersContainer, Highlights } from "../components";
 import orders from "../data/orders.json";
-import products from "../data/products.json";
 
-const OrderScreen = () => {
+const OrderScreen = ({ products }) => {
   return (
     <>
         <Header />

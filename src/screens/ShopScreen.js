@@ -1,7 +1,6 @@
 import { Header, PageHeader, Highlights, Pagination, Newsletter, Footer } from "../components";
-import products from "../data/products.json";
 
-const ShopScreen = () => {
+const ShopScreen = ({ products }) => {
   const pageHeaderData = {
     id: "shop-hero",
     title: "quedateencasa",
