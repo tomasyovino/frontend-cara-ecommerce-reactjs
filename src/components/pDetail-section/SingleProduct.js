@@ -1,27 +1,37 @@
 import { useState, useEffect } from "react";
+import { addProduct } from "../../redux/cart.redux";
+import { useDispatch } from "react-redux";
 
 const SingleProduct = ({ product }) => {
-    const [ qty, setQty ] = useState(1);
+    const [ quantity, setQuantity ] = useState(1);
     const [ size, setSize ] = useState(null);
     const [ productFile, setProductFile ] = useState(product.file[0]);
+    const dispatch = useDispatch();
 
     useEffect(() => {
       if(product) setProductFile(product.file[0]);
-      setQty(1);
+      setQuantity(1);
       setSize(null);
     }, [product])
     
     const handleQuantity = (type) => {
         if(type === "dec") {
-            if(qty > 1) setQty(qty - 1);
+            if(quantity > 1) setQuantity(quantity - 1);
         } else {
-            if(qty < 10) setQty(qty + 1);
+            if(quantity < 10) setQuantity(quantity + 1);
         };
     };
 
-    // const handleAddToCart = () => {
-
-    // };
+    const handleAddToCart = () => {
+        dispatch(
+            addProduct({ 
+                ...product, 
+                quantity, 
+                color: productFile,
+                size
+            })
+        );
+    };
 
     return (
         <>
@@ -54,10 +64,10 @@ const SingleProduct = ({ product }) => {
                                 </select>
                                 <div>
                                     <button className="dec-btn" onClick={() => handleQuantity("dec")} >-</button>
-                                    <span>{qty}</span>
+                                    <span>{quantity}</span>
                                     <button className="inc-btn" onClick={() => handleQuantity("inc")} >+</button>
                                 </div>
-                                <button className="normal">Agregar al Carrito</button>
+                                <button className="normal" onClick={() => handleAddToCart()}>Agregar al Carrito</button>
                                 <h4>Detalles del Producto</h4>
                                 <span>{product.desc}</span>
                             </div>
