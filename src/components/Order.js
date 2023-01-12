@@ -4,18 +4,15 @@ const Order = ({ order }) => {
       <table className='products-table'>
         <thead>
           <tr>
-            <strong>PRODUCTOS</strong>
-          </tr>
-          <tr>
-            <th>NOMBRE</th>
+            <th>PROD</th>
             <th>CTA</th>
             <th>PRECIO</th>
           </tr>
         </thead>
         <tbody>
           {
-            order.products.map((p) => (
-              <tr>
+            order.products.map((p, index) => (
+              <tr key={index}>
                 <td>{p.name}</td>
                 <td>{p.quantity}</td>
                 <td>{p.price}</td>

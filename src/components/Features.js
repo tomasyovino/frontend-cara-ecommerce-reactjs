@@ -1,9 +1,9 @@
 const Features = ({ data }) => {
   return (
-    <section id="feature" class="feature section-p1">
+    <section id="feature" className="feature section-p1">
       {
-        data.map((box) => (
-          <div className="fe-box">
+        data.map((box, index) => (
+          <div className="fe-box" key={index}>
             <img src={box.img} alt="Imágen" />
             <h6>{box.text}</h6>
           </div>
