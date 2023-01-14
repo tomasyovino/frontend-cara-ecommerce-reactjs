@@ -231,7 +231,7 @@ body {
     position: sticky;
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: 9999;
 }
 
 .navbar {
@@ -1046,11 +1046,20 @@ body {
     color: #fff;
 }
 
+.client-form form button:disabled {
+    background-color: #088178;
+    color: #088178;
+}
+
 .client-form form .btn-container div {
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: flex-start;
+}
+
+.client-form form span {
+    color: #FF0000;
 }
 
 /* Profile Start */

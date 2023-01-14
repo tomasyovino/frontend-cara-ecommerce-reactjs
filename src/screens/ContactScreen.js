@@ -1,4 +1,4 @@
-import { Header, PageHeader, ContactDetails, ContactForm, Newsletter, Footer } from "../components";
+import { PageHeader, ContactDetails, ContactForm, Newsletter } from "../components";
 
 const ContactScreen = () => {
   const pageHeaderData = {
@@ -9,12 +9,10 @@ const ContactScreen = () => {
 
   return (
     <>
-        <Header />
         <PageHeader data={pageHeaderData}/>
         <ContactDetails />
         <ContactForm />
         <Newsletter />
-        <Footer />
     </>
   )
 }

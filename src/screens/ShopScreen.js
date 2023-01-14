@@ -1,4 +1,4 @@
-import { Header, PageHeader, Highlights, Pagination, Newsletter, Footer } from "../components";
+import { PageHeader, Highlights, Pagination, Newsletter } from "../components";
 
 const ShopScreen = ({ products }) => {
   const pageHeaderData = {
@@ -9,12 +9,10 @@ const ShopScreen = ({ products }) => {
 
   return (
     <>
-        <Header />
         <PageHeader data={pageHeaderData} />
         <Highlights products={products} />
         <Pagination />
         <Newsletter />
-        <Footer />
     </>
   )
 }

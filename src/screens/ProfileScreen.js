@@ -1,4 +1,4 @@
-import { Footer, Header, PageHeader, ProfileBanner,Highlights, Newsletter } from "../components";
+import { PageHeader, ProfileBanner,Highlights, Newsletter } from "../components";
 import orders from "../data/orders.json";
 
 const user = {
@@ -11,12 +11,10 @@ const user = {
 const ProfileScreen = ({ products }) => {
   return (
     <>
-        <Header />
         <PageHeader data={{ id: "contact-hero", title: user.username, text: "¡Lorem ipsum dolor sit amet, consectetur!" }}/>
         <ProfileBanner user={user} orders={orders} />
         <Highlights carousel={true} products={products} />
         <Newsletter />
-        <Footer />
     </>
   )
 }

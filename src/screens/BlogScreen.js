@@ -1,4 +1,4 @@
-import { Header, PageHeader, BlogBox, Pagination, Newsletter, Footer } from "../components";
+import { PageHeader, BlogBox, Pagination, Newsletter } from "../components";
 import blogs from "../data/blogs.json";
 
 const BlogScreen = () => {
@@ -10,12 +10,10 @@ const BlogScreen = () => {
 
   return (
     <>
-        <Header />
         <PageHeader data={pageHeaderData} />
         <BlogBox data={blogs}/>
         <Pagination />
         <Newsletter />
-        <Footer />
     </>
   );
 };

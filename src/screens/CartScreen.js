@@ -1,4 +1,4 @@
-import { Header, PageHeader, CartTable, CartOrderTotal, Footer } from "../components";
+import { PageHeader, CartTable, CartOrderTotal } from "../components";
 import { useSelector } from "react-redux";
 
 const CartScreen = () => {
@@ -11,11 +11,9 @@ const CartScreen = () => {
 
   return (
     <>
-        <Header />
         <PageHeader data={pageHeaderData} />
         <CartTable cartProducts={cart.products} />
         <CartOrderTotal cartAmount={cart}/>
-        <Footer />
     </>
   )
 }

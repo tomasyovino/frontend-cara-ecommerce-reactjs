@@ -1,4 +1,4 @@
-import { Header, PageHeader, AboutHead, AboutApp, Features, Footer } from "../components";
+import { PageHeader, AboutHead, AboutApp, Features } from "../components";
 import features from "../data/features.json";
 
 const AboutScreen = () => {
@@ -10,12 +10,10 @@ const AboutScreen = () => {
 
   return (
     <>
-        <Header />
         <PageHeader data={pageHeaderData} />
         <AboutHead />
         <AboutApp />
         <Features data={features} />
-        <Footer />
     </>
   )
 }
