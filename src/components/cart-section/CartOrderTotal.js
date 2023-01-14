@@ -23,7 +23,7 @@ const CartOrderTotal = ({ cartAmount }) => {
                                 <td><strong>${cartAmount.total}</strong></td>
                             </tr>
                         </table>
-                        <PayButton />
+                        <PayButton cartAmount={cartAmount} />
                     </div>
                 :
                     <div className="no-items-on-cart">

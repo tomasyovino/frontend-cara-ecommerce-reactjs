@@ -8,8 +8,6 @@ const Header = () => {
   const [ active, setActive ] = useState(false);
   const cartProductQuantity = useSelector((state) => state.cart.quantity);
 
-  let connected = true;
-
   return (
     <header id="header" className='header'>
        <Link to="/"><img src={Logo} className="logo" alt="logo" /></Link> 
@@ -58,7 +56,7 @@ const Header = () => {
                 </li>
                 <li>
                   <NavLink
-                    to={ connected ? "/profile" : "/login" }
+                    to="/profile"
                     className={({ isActive }) => isActive ? "active" : undefined}
                   >
                     <i className="fa-solid fa-user"></i>
