@@ -10,7 +10,7 @@ const ProfileOrders = ({ orders }) => {
           orders && orders.length !== 0
             ?
               orders.map((order) => (
-                <Link to={`/orders/${order.userId}/${order._id}`} key={order._id}><Order order={order} /></Link>
+                <Order key={order._id} order={order} />
               ))
             : <span>Aún no tienes ordenes registradas.</span>
         }

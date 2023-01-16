@@ -10,7 +10,7 @@ const OrdersContainer = ({ orders }) => {
                     orders && orders.length !== 0
                         ?
                         orders.map((order) => (
-                            <Order order={order} />
+                            <Order order={order} key={order._id} />
                         ))
                         : <span>Aún no tienes ordenes registradas.</span>
                 }

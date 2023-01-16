@@ -4,8 +4,8 @@ const BlogBox = ({ data }) => {
   return (
     <section id="blog" className='blog'>
       {
-        data.map((box) => (
-          <div className='blog-box'>
+        data.map((box, index) => (
+          <div className='blog-box' key={index}>
             <div className='blog-img'>
               <img src={box.img} alt="blog-site" />
             </div>

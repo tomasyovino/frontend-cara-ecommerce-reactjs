@@ -11,9 +11,9 @@ const ContactForm = () => {
             <input type="text" placeholder="Tu nombre" />
             <input type="text" placeholder="Asunto" />
             <textarea name="" id="" cols="30" rows="10" placeholder="Escribe tu mensaje"></textarea>
-            <button class="normal">Enviar</button>
+            <button className="normal">Enviar</button>
         </form>
-        <div class="people">
+        <div className="people">
             <div>
                 <img src={people1} alt="people" />
                 <p><span>John Doe</span> Director de Publicidad <br /> Tel: +12 3456789101 <br /> E-mail: contacto@ejemplo.com</p>
