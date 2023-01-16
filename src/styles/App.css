@@ -1170,6 +1170,45 @@ body {
     transition: 0.2s;
 }
 
+.modal_component form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.modal_component div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.modal_component div input {
+    padding: 7px 15px;
+    width: 100%;
+    outline: none;
+    border: 1px solid #e1e1e1;
+}
+
+.modal_component span {
+    color: red;
+}
+
+.modal_component .button_container {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.modal_component .button_container button {
+    color: #fff;
+}
+.modal_component .button_container button:nth-child(1) {
+    background-color: #df4759;
+}
+.modal_component .button_container button:nth-child(2) {
+    background-color: #088178;
+}
+
 /* Start Orders Page */
 .orders-section .orders-data {
     min-height: 70vh;

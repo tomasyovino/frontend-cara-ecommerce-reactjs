@@ -25,4 +25,5 @@ export { default as ProfileOrders } from "./profile-section/ProfileOrders";
 export { default as OrdersContainer } from "./orders-section/OrdersContainer";
 export { default as Order } from "./Order";
 export { default as PayButton } from "./PayButton";
+export { default as ModalComponent } from "./ModalComponent";
 export { default as ScrollToTop } from "./ScrollToTop";
