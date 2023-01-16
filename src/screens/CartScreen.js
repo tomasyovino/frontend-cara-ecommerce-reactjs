@@ -1,8 +1,11 @@
 import { PageHeader, CartTable, CartOrderTotal } from "../components";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 const CartScreen = () => {
   const cart = useSelector((state) => state.cart);
+  const userID = useSelector((state) => state.user.currentUser._id);
+  const dispatch = useDispatch();
+
   const pageHeaderData = {
     id: "cart-hero",
     title: "conócenos",
@@ -13,7 +16,7 @@ const CartScreen = () => {
     <>
         <PageHeader data={pageHeaderData} />
         <CartTable cartProducts={cart.products} />
-        <CartOrderTotal cartAmount={cart}/>
+        <CartOrderTotal cart={cart} userID={userID} dispatch={dispatch} />
     </>
   )
 }

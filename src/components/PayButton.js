@@ -1,30 +1,42 @@
 import { useState, useEffect } from "react";
 import StripeCheckout from "react-stripe-checkout";
 import { userRequest } from "../api/request";
+import { buyHandler } from "../redux/apiCalls";
 
-const PayButton = ({ cartAmount }) => {
+const PayButton = ({ cart, userID, dispatch }) => {
     const [ stripeToken, setStripeToken ] = useState(null);
 
     const onToken = (token) => {
         setStripeToken(token);
     };
-    console.log(stripeToken)
+
     useEffect(() => {
-        const makeRequest = async () => {
+        const paymentRequest = async () => {
             try {
-                const res = await userRequest.post(
-                    "http://localhost:5000/api/checkout/payment", {
-                        tokenId: stripeToken.id,
-                        amount: cartAmount.total * 100,
-                    }
-                );
-                console.log(res.data);
+                await userRequest.post( "checkout/payment", {
+                    tokenId: stripeToken.id,
+                    amount: cart.total * 100,
+                });
+                await createOrder(userID, cart);
+                buyHandler(dispatch);
             } catch (err) {
-                console.log(err)
+                console.log(err);
             };
         };
 
-        stripeToken && makeRequest();
+        const createOrder = async (userID, cart) => {
+            try {
+                await userRequest.post("orders", {
+                    userId: userID,
+                    products: cart.products,
+                    amount: cart.total
+                });
+            } catch (err) {
+                console.log(err);
+            };
+        };
+
+        stripeToken && paymentRequest();
     }, [stripeToken]);
 
     return (
@@ -34,8 +46,8 @@ const PayButton = ({ cartAmount }) => {
                 image="https://res.cloudinary.com/dtyrld6tv/image/upload/v1673193839/cara-ecommerce/logo_klv0ty.png"
                 billingAddress
                 shippingAddress
-                description={`Tu total es de $${cartAmount.total}`}
-                amount={cartAmount.total * 100}
+                description={`Tu total es de $${cart.total}`}
+                amount={cart.total * 100}
                 token={onToken}
                 stripeKey={process.env.REACT_APP_STRIPE_KEY}
             >

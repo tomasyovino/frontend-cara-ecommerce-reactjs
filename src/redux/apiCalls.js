@@ -20,3 +20,11 @@ export const logout = async (dispatch) => {
         dispatch(logoutFailure());
     };
 };
+
+export const buyHandler = async (dispatch) => {
+    try {
+        dispatch(removeAllProducts());
+    } catch (err) {
+        console.log(err)
+    };
+};
