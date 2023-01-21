@@ -281,6 +281,12 @@ body {
 
 .footer {
     display: flex;
+    flex-direction: column;
+    align-items: space-between;
+}
+
+.footer .col-container {
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
@@ -884,6 +890,14 @@ body {
 .cart table td:nth-child(1) {
     width: 100px;
     text-align: center;
+}
+.cart table td:nth-child(1) button {
+    cursor: pointer;
+    font-size: 22px;
+    color: red;
+    background-color: transparent;
+    border: none;
+    outline: none;
 }
 .cart table td:nth-child(2) {
     width: 150px;
