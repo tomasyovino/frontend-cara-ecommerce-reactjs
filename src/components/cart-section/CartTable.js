@@ -1,26 +1,24 @@
-import { Link } from "react-router-dom";
+import { removeProductFromCart } from "../../redux/apiCalls"
 
-const CartTable = ({ cartProducts }) => {
+const CartTable = ({ cartProducts, dispatch }) => {
   return (
     <section id="cart" className="cart section-p1">
         <table width="100%">
             <thead>
-                <tr>
-                    <td>ELIMINAR</td>
-                    <td>IMAGEN</td>
-                    <td>PRODUCTO</td>
-                    <td>PRECIO</td>
-                    <td>CANTIDAD</td>
-                    <td>SUBTOTAL</td>
-                </tr>
+                <td>ELIMINAR</td>
+                <td>IMAGEN</td>
+                <td>PRODUCTO</td>
+                <td>PRECIO</td>
+                <td>CANTIDAD</td>
+                <td>SUBTOTAL</td>
             </thead>
             <tbody>
                 {
                     cartProducts && cartProducts.length > 0 
                         ?
-                            cartProducts.map((product) => (
-                                <tr key={product._id}>
-                                    <td><Link to="/"><i className="fa fa-times" aria-hidden="true"></i></Link></td>
+                            cartProducts.map((product, index) => (
+                                <tr key={index}>
+                                    <td><button onClick={() => removeProductFromCart(dispatch, product)}><i className="fa fa-times" aria-hidden="true"></i></button></td>
                                     <td><img src={product.color.imgUrl} alt={product.name} /></td>
                                     <td>{`${product.name} (${product.size})`}</td>
                                     <td>{product.price}</td>
