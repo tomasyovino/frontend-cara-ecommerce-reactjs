@@ -11,7 +11,6 @@ const SingleProduct = ({ product }) => {
     useEffect(() => {
       if(product) setProductFile(product.file[0]);
       setQuantity(1);
-      setSize(null);
     }, [product])
     
     const handleQuantity = (type) => {

@@ -15,7 +15,7 @@ const CartScreen = () => {
   return (
     <>
         <PageHeader data={pageHeaderData} />
-        <CartTable cartProducts={cart.products} />
+        <CartTable cartProducts={cart.products} dispatch={dispatch} />
         <CartOrderTotal cart={cart} userID={userID} dispatch={dispatch} />
     </>
   )
