@@ -1,5 +1,5 @@
 import { publicRequest } from "../api/request";
-import { removeAllProducts } from "./cart.redux";
+import { removeProduct, removeAllProducts } from "./cart.redux";
 import { loginFailure, loginStart, loginSuccess, logoutSuccess, logoutFailure } from "./user.redux";
 
 export const login = async (dispatch, user) => {
@@ -12,7 +12,7 @@ export const login = async (dispatch, user) => {
     };
 };
 
-export const logout = async (dispatch) => {
+export const logout = (dispatch) => {
     try {
         dispatch(removeAllProducts());
         dispatch(logoutSuccess());
@@ -21,10 +21,18 @@ export const logout = async (dispatch) => {
     };
 };
 
-export const buyHandler = async (dispatch) => {
+export const buyHandler = (dispatch) => {
     try {
         dispatch(removeAllProducts());
     } catch (err) {
-        console.log(err)
+        console.log(err);
+    };
+};
+
+export const removeProductFromCart = (dispatch, product) => {
+    try {
+        dispatch(removeProduct(product));
+    } catch (err) {
+        console.log(err);
     };
 };

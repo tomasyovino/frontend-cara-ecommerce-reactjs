@@ -1,11 +1,13 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import { useEffect, useState } from "react";
 import { publicRequest } from "./api/request";
 import { ScrollToTop } from "./components";
 import { HomeScreen, AboutScreen, BlogScreen, CartScreen, ContactScreen, ProductDetailScreen, ShopScreen, RegisterScreen, LoginScreen, ProfileScreen, OrderScreen } from "./screens";
 import { Header, Footer } from "./components";
 import './styles/App.css';
-import './styles/responsive.css'
+import './styles/responsive.css';
+import "react-toastify/dist/ReactToastify.css";
 import { useSelector } from "react-redux";
 
 const App = () => {
@@ -22,6 +24,7 @@ const App = () => {
   
   return (
     <BrowserRouter>
+      <ToastContainer />
       <ScrollToTop />
       <Header />
       <Routes>
