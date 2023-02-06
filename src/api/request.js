@@ -10,7 +10,7 @@ export const publicRequest = axios.create({
 
 export const userRequest = axios.create({
     baseURL: process.env.REACT_APP_BASE_URL,
-    header: {
-        token: `Bearer ${TOKEN}`
+    headers: {
+        authorization: `Bearer ${TOKEN}`
     }
 });
