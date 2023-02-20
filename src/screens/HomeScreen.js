@@ -1,7 +1,11 @@
-import { HomeHero, Features, Highlights, Banner, NewArrivals, LowBanner, Newsletter } from "../components";
+import { HomeHero, Features, Highlights, Banner, NewArrivals, LowBanner, Newsletter, Loader } from "../components";
 import features from "../data/features.json";
 
-const HomeScreen = ({ products }) => {
+const HomeScreen = ({ products, loader }) => {
+
+
+  if(loader) return <Loader />;
+
   return (
     <>
       <HomeHero />

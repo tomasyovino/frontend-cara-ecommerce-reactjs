@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { userRequest } from "../api/request";
-import { PageHeader, ProfileBanner,Highlights, Newsletter } from "../components";
+import { PageHeader, ProfileBanner,Highlights, Newsletter, Loader } from "../components";
 
-const ProfileScreen = ({ products }) => {
-  const [ user, setUser ] = useState({});
-  const [ orders, setOrders ] = useState([]);
+const ProfileScreen = ({ products, loader }) => {
+  const [ user, setUser ] = useState(null);
+  const [ orders, setOrders ] = useState(null);
   const userID = useSelector((state) => state.user.currentUser._id);
   const dispatch = useDispatch();
 
@@ -18,6 +18,8 @@ const ProfileScreen = ({ products }) => {
     };
     getElements();
   }, [userID]);
+
+  if(loader || !user || !orders) return <Loader />;
 
   return (
     <>

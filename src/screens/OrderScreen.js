@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { userRequest } from "../api/request";
-import { OrdersContainer, Highlights } from "../components";
+import { OrdersContainer, Highlights, Loader } from "../components";
 
-const OrderScreen = ({ products }) => {
+const OrderScreen = ({ products, loader }) => {
   const [ orders, setOrders ] = useState([]);
   const userID = useSelector((state) => state.user.currentUser._id);
 
@@ -14,6 +14,8 @@ const OrderScreen = ({ products }) => {
     };
     getOrders();
   }, [userID]);
+
+  if(loader) return <Loader />;
 
   return (
     <>

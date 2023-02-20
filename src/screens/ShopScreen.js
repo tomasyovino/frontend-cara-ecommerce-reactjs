@@ -1,11 +1,13 @@
-import { PageHeader, Highlights, Pagination, Newsletter } from "../components";
+import { PageHeader, Highlights, Pagination, Newsletter, Loader } from "../components";
 
-const ShopScreen = ({ products }) => {
+const ShopScreen = ({ products, loader }) => {
   const pageHeaderData = {
     id: "shop-hero",
     title: "quedateencasa",
     text: "¡Ahorre más con los cupones y hasta 70% de descuento!"
   }
+
+  if(loader) return <Loader />;
 
   return (
     <>

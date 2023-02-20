@@ -27,3 +27,4 @@ export { default as Order } from "./Order";
 export { default as PayButton } from "./PayButton";
 export { default as ModalComponent } from "./ModalComponent";
 export { default as ScrollToTop } from "./ScrollToTop";
+export { default as Loader } from "./Loader";

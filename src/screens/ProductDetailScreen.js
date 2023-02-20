@@ -1,9 +1,9 @@
 import { useLocation } from "react-router";
 import { useState, useEffect } from "react";
 import { publicRequest } from "../api/request";
-import { SingleProduct, Highlights, Newsletter } from "../components";
+import { SingleProduct, Highlights, Newsletter, Loader } from "../components";
 
-const ProductDetailScreen = ({ products }) => {
+const ProductDetailScreen = ({ products, loader }) => {
   const location = useLocation();
   const id = location.pathname.split("/")[2];
   
@@ -16,6 +16,8 @@ const ProductDetailScreen = ({ products }) => {
     };
     getProduct(id);
   }, [id]);
+
+  if(loader) return <Loader />;
 
   return (
     product &&
